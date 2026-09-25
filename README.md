@@ -177,3 +177,27 @@ ground truth.
   growing cost per call were not evaluated.
 - The meetings are fictional and the ground truth was labeled by one person.
 - Results vary slightly between runs (±1–2 of 500).
+
+### Note: a sliding-window variant
+
+We also tried sending only the last 3 minutes of the transcript plus the
+previous signals, instead of the whole transcript. On the five Korean
+scripts it matched the ground truth on 410 / 500 checks (82%, versus 98% with
+the whole transcript). The main failure (44 of 90 errors): once a conclusion
+left the 3-minute window, Jev answered 🔴 even though the previous signal was
+🟢. Jev judges what it sees; asking it to carry the state forward did not work.
+
+A window could still be the better choice when the whole transcript becomes
+a problem:
+
+- Long meetings (roughly an hour or more), where the full transcript gets
+  close to Jev's 32k-token limit, or where long, mostly unrelated text lowers
+  accuracy.
+- Frequent checks on long meetings, where sending the whole transcript every
+  time multiplies cost and latency; a window keeps each call small and
+  constant in size.
+
+To work, the state should be kept in code: Jev only judges what happened in
+the window (not mentioned / discussed / concluded / conclusion taken back), and
+the code updates the signal, keeping it unchanged when the agenda was not
+mentioned. This was not implemented or evaluated here.
