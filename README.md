@@ -19,8 +19,7 @@ covered and which are still open.
 ![Demo: agenda signals change as the meeting goes on](docs/demo.gif)
 
 *16× speed. Left: the meeting and the agenda signals from Jev. Right: the local
-speech-to-text and Jev calls as they happen. Slower version:
-[8× speed MP4](docs/demo.mp4).*
+speech-to-text and Jev calls as they happen.*
 
 ## How it works
 
