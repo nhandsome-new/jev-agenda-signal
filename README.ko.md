@@ -2,7 +2,7 @@
 
 **[Jev](https://docs.typesafe.ai/)로 회의 중 아젠다를 실시간으로 관리합니다.**
 
-[English](README.md)
+[English](README.md) · [日本語](README.ja.md)
 
 회의가 진행되는 동안, 아젠다마다 신호등이 대화에 따라 바뀝니다.
 

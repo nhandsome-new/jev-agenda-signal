@@ -2,7 +2,7 @@
 
 **Track meeting agendas in real time with [Jev](https://docs.typesafe.ai/).**
 
-[한국어](README.ko.md)
+[한국어](README.ko.md) · [日本語](README.ja.md)
 
 During a meeting, every agenda item gets a traffic-light signal that updates
 as people talk:

@@ -1,0 +1,169 @@
+# Agenda Signal
+
+**[Jev](https://docs.typesafe.ai/) で会議中のアジェンダをリアルタイムに管理します。**
+
+[English](README.md) · [한국어](README.ko.md)
+
+会議の進行に合わせて、アジェンダごとの信号が会話に応じて変わります。
+
+| 信号 | 意味 |
+|---|---|
+| 🔴 | まだ話していない |
+| 🟡 | 話はしたが、まだ明確な結論がない（先送り・結論の撤回を含む） |
+| 🟢 | 明確な結論が出て、その結論が有効 |
+
+会議が終わる前に、どのアジェンダがまだ扱われていないか、どれがまだ決まっていないかを
+進行役が確認できます。
+
+![デモ：会議の進行に合わせてアジェンダの信号が変わる](docs/demo.gif)
+
+*16倍速。左：会議画面と Jev が判定したアジェンダの信号。右：ローカル音声認識と Jev 呼び出しが
+実際に処理される様子。ゆっくり見る場合：[8倍速 MP4](docs/demo.mp4)。*
+
+## 仕組み
+
+1分（または30秒）ごとに、それまでの会議テキストを Jev に **1回のリクエスト** で送ります。
+アジェンダごとに **Choice 質問を1つ** 付けると、Jev がすべての質問を並列に判定し、
+信号と確率を返します。
+
+```python
+Choice(
+    instructions={
+        "agenda": {"id": "A2", "title": "Budget", "description": "How much money can be spent on the workshop."},
+        "question": "What is the status of `agenda` in `transcript`?",
+    },
+    criteria={
+        "red": "Not talked about yet. The same words used about something else do not count.",
+        "yellow": "Talked about, but there is no clear conclusion yet. This includes putting it off, "
+                  "or taking back an earlier conclusion.",
+        "green": "A clear conclusion was reached, and it still stands.",
+    },
+)
+```
+
+ループと流れはコードが受け持ち、Jev は狭い判断だけを行います。コードは `src/agenda_signal/judge.py`。
+
+## 結果
+
+20分の架空の会議5本を韓国語・英語・日本語で用意し、信号が変わるタイミングを人手で
+ラベル付けしました。Jev（`jev-1.13.0`）で1分ごとに判定 → 台本5本 × 20回 × アジェンダ5つ =
+言語ごとに500判定。
+
+| 指標 | 韓国語 | 英語 | 日本語 |
+|---|---|---|---|
+| 各判定時点での信号の正解 | 489 / 500 (97.8%) | 491 / 500 (98.2%) | 492 / 500 (98.4%) |
+| 最終信号の正解 | 23 / 25 | 25 / 25 | 25 / 25 |
+| トラップ通過 | 13 / 14 | 14 / 14 | 14 / 14 |
+| 信号の切り替わり検出 | 30 / 31 | 30 / 31 | 30 / 31 |
+| 切り替わり後の反映まで（中央値） | 36秒 | 37秒 | 36秒 |
+
+- 3言語すべてで同じ信号になった判定：490 / 500。
+- Jev 呼び出し1回あたり約0.27秒。コストは **20分の会議1本あたり約 $0.003**。
+- トラップは実際の会議でよくある場面です：アジェンダのキーワードなしで結論を出す、同じ単語が
+  別の文脈で出る、名前だけ出して先送りする、結論の撤回、1文で2つの決定、最後の1分で初めて出た
+  アジェンダ。
+- 前段にローカル ASR（Whisper large-v3 turbo）を付けた場合、音声30秒分を2秒以内に
+  処理し（ASR + Jev）、判定の正解は 97 / 100（韓国語）、112 / 115（英語）でした。
+
+## クイックスタート
+
+Python 3.11 以上と [uv](https://docs.astral.sh/uv/) が必要です。
+
+```bash
+uv sync
+uv run pytest                                        # オフラインテスト
+uv run agenda-signal validate                        # データセットの検査
+
+# API キーなしで全体の流れを確認（フェイク判定器は常に 🔴 と答えます）
+uv run agenda-signal run --lang en --version good --judge fake
+
+# Jev で実行
+cp .env.example .env                                 # TYPESAFE_API_KEY を設定
+uv run agenda-signal run --lang en --version good    # 20回呼び出し、約 $0.003
+uv run agenda-signal eval runs/<run_id>              # 指標 + 1分ごとのタイムライン
+```
+
+`run` は台本を1分ずつ再生しながら判定し、`runs/<run_id>/ticks.jsonl` に記録します。
+`--version` を省くと台本5本すべてを実行し、`--lang` は `ko`、`en`、`ja` のいずれかです。
+途中で止まった場合は `run --resume runs/<run_id>` で続きから実行できます。
+
+## 自分の ASR とつなぐ
+
+音声認識（ASR）はお好みのものを各自で設定してください。確定した文を会議テキストに追加し、
+30〜60秒ごとに信号を確認します。
+
+```python
+from agenda_signal.judge import JevJudge, build_questions
+from agenda_signal.models import Agenda, Utterance
+from agenda_signal.state import build_state
+
+agendas = [
+    Agenda("A1", "Date", "When the workshop will be held."),
+    Agenda("A2", "Budget", "How much money can be spent on the workshop."),
+    # ...
+]
+judge = JevJudge()                     # TYPESAFE_API_KEY を読み込みます
+questions = build_questions(agendas)
+transcript: list[Utterance] = []
+
+
+def on_asr_segment(t_sec: float, text: str, speaker: str = "unknown") -> None:
+    transcript.append(Utterance(t_sec, speaker, text))
+
+
+def check_signals(now_sec: float) -> dict[str, str]:
+    result = judge.evaluate(build_state(transcript, now_sec), questions)
+    return {agenda_id: p.choice for agenda_id, p in result.predictions.items()}
+```
+
+デモで得たヒント：
+
+- 音声を区切って文字起こしする場合、各区切りの最後の文は確定せず、次の区切りで
+  もう一度文字起こししてください。文の途中で切れていることが多いためです。
+- 話者の区別はなくても構いません。デモではすべての文を `"unknown"` として送りました。
+- アジェンダの説明はわかりやすい1文で書いてください。Jev は指示文を文字どおりに読みます。
+
+## デモの作り方（ローカル Mac）
+
+リアルタイムのデモは、Jev API の呼び出しを除いてすべて Mac 1台で動かしました。
+デモ用のツールはこのリポジトリには含めていません。使った構成は以下のとおりです。
+
+| 段階 | 使ったもの | 内容 |
+|---|---|---|
+| 音声認識 | [mlx-whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper) 0.4.3、モデル `mlx-community/whisper-large-v3-turbo` | 30秒ごとに新しく入った音声を文字起こしし、最後の文は次の回にもう一度文字起こし |
+| アジェンダの信号 | Jev `jev-1.13.0` | 30秒ごとに、それまでの会議テキスト全体で判定（このリポジトリと同じ方式） |
+| 動画 | Pillow でフレームを描画し ffmpeg でエンコード | ビデオ会議画面 + アジェンダパネル + 開発者画面（処理ログ、Jev の確率） |
+
+30秒ごとの処理時間（実測）：ASR 最大1.1秒、Jev 最大0.7秒。
+
+## データセット
+
+| 台本 | 会議 | 最終信号（A1–A5） |
+|---|---|---|
+| `good` | ワークショップ準備、うまく進んだ会議 | 🟢🟢🟢🟢🟡 |
+| `normal` | ワークショップ準備、時間が足りなくなった会議 | 🟢🟡🟡🔴🔴 |
+| `bad` | ワークショップ準備、脱線と決定の撤回 | 🟡🔴🔴🟡🔴 |
+| `office_move` | オフィス移転 | 🟢🟢🟡🟢🟡 |
+| `onboarding` | 新入社員の入社準備 | 🟢🟢🟡🔴🔴 |
+
+```
+data/
+├── scripts.json                     台本 → テーマ + 最終信号の正解
+├── agendas/<topic>.json             テーマごとのアジェンダ5つ
+├── transcripts/{ko,en,ja}/<script>.jsonl
+├── gt/<script>.json                 正解：信号が変わるタイミング
+└── outlines/<script>.md             人が読むための要約、トラップ、想定される信号
+```
+
+台本の1行：`{"t_sec": 0, "speaker": "lead", "text": "..."}`。
+正解イベント：`{"t_sec": 272, "agenda": "A1", "signal": "green"}`。ある時点の信号は、
+その時点以前の最後のイベントです（なければ 🔴）。英語・日本語は発話時刻を保ったままの翻訳なので、
+正解を共有します。
+
+## 制限
+
+- 20分の会議でのみ検証しました。毎回会議テキスト全体を送るため、会議が長くなるほど入力が
+  大きくなります（今回の台本では1分あたり約235トークン）。Jev の入力上限（3.2万トークン）、
+  長い入力での精度、呼び出しあたりのコスト増加は検証していません。
+- 架空の会議であり、正解は1人がラベル付けしました。
+- 実行ごとに結果が少し変わります（500判定中 ±1〜2）。
