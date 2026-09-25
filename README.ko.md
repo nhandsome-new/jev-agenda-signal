@@ -123,7 +123,6 @@ def check_signals(now_sec: float) -> dict[str, str]:
 
 | 단계 | 사용한 것 | 내용 |
 |---|---|---|
-| 장비 | Mac Studio, Apple M4 Max, 64GB | macOS 26 |
 | 음성 인식 | [mlx-whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper) 0.4.3, 모델 `mlx-community/whisper-large-v3-turbo` | 30초마다 새로 들어온 음성을 받아쓰고, 마지막 문장은 다음 차례에 다시 받아씀 |
 | 아젠다 신호 | Jev `jev-1.13.0` | 30초마다 지금까지의 회의 텍스트 전체로 판정 (이 저장소와 같은 방식) |
 | 영상 | Pillow로 프레임을 그려 ffmpeg로 인코딩 | 화상회의 화면 + 아젠다 패널 + 개발자 화면(처리 로그, Jev 확률) |

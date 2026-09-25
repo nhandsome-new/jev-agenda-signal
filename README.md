@@ -132,7 +132,6 @@ tools are not part of this repository; this is what was used.
 
 | Step | What | Detail |
 |---|---|---|
-| Machine | Mac Studio, Apple M4 Max, 64 GB | macOS 26 |
 | Speech to text | [mlx-whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper) 0.4.3, model `mlx-community/whisper-large-v3-turbo` | Every 30 s, the audio since the last committed point is transcribed; the last segment is re-transcribed next time |
 | Agenda signals | Jev `jev-1.13.0` | Every 30 s, the whole transcript so far, as in this repository |
 | Video | Pillow frames piped to ffmpeg | Video-call layout with the agenda panel, plus a developer view (pipeline log and Jev probabilities) |
