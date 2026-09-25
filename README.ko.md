@@ -63,7 +63,10 @@ Choice(
 - 앞단에 로컬 ASR(Whisper large-v3 turbo)을 붙였을 때, 음성 30초 분량을 2초 안에
   처리했고(ASR + Jev) 판정 정답은 97 / 100(한국어), 112 / 115(영어)였습니다.
 
-## 빠른 시작
+## 빠른 시작: 샘플 회의 재생
+
+여기서는 음성도 음성인식도 쓰지 않습니다. 샘플 회의는 텍스트 대본이고, `run`이 대본을
+1분씩 실시간 회의처럼 Jev에 넣은 뒤 정답과 비교합니다.
 
 Python 3.11 이상과 [uv](https://docs.astral.sh/uv/)가 필요합니다.
 
@@ -87,8 +90,8 @@ uv run agenda-signal eval runs/<run_id>              # 지표 + 분 단위 타�
 
 ## 내 ASR과 연결하기
 
-음성인식(ASR)은 원하는 것으로 직접 설정하세요. 확정된 문장을 대본에 붙이고,
-30~60초마다 신호를 확인하면 됩니다.
+음성인식은 포함돼 있지 않으니 원하는 것을 직접 연결하세요. 아래 `my_asr()` 자리에 넣으면
+됩니다. 문장이 확정될 때마다 `(회의 시작부터 지난 초, 텍스트)`를 내보내면 되고, 나머지는 그대로 둡니다.
 
 ```python
 from agenda_signal.judge import JevJudge, build_questions
@@ -105,13 +108,23 @@ questions = build_questions(agendas)
 transcript: list[Utterance] = []
 
 
-def on_asr_segment(t_sec: float, text: str, speaker: str = "unknown") -> None:
-    transcript.append(Utterance(t_sec, speaker, text))
+def my_asr():
+    """여기에 내 음성인식이 들어갑니다.
+
+    확정된 문장마다 (t_sec, text)를 yield 하세요. 예: Whisper, 클라우드 음성인식 API,
+    회의 도구의 실시간 자막.
+    """
+    raise NotImplementedError("여기에 내 음성인식을 연결하세요")
 
 
-def check_signals(now_sec: float) -> dict[str, str]:
-    result = judge.evaluate(build_state(transcript, now_sec), questions)
-    return {agenda_id: p.choice for agenda_id, p in result.predictions.items()}
+last_check = 0.0
+for t_sec, text in my_asr():                          # <- 내 ASR이 보내는 문장
+    transcript.append(Utterance(t_sec, "unknown", text))
+    if t_sec - last_check >= 30:                       # 30초마다 판정
+        result = judge.evaluate(build_state(transcript, t_sec), questions)
+        signals = {agenda_id: p.choice for agenda_id, p in result.predictions.items()}
+        print(signals)                                 # 예: {'A1': 'green', 'A2': 'yellow'}
+        last_check = t_sec
 ```
 
 데모에서 얻은 팁:

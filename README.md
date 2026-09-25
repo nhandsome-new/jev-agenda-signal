@@ -71,7 +71,11 @@ per language.
   audio took under 2 s (ASR + Jev), and the signal matched the ground truth on
   97 / 100 (Korean) and 112 / 115 (English) checks.
 
-## Quick start
+## Quick start: replay the sample meetings
+
+No audio and no speech recognition here: the sample meetings are text
+transcripts. `run` feeds each transcript to Jev minute by minute, as if the
+meeting were happening live, and compares the signals with the ground truth.
 
 Requires Python ≥ 3.11 and [uv](https://docs.astral.sh/uv/).
 
@@ -95,8 +99,9 @@ An interrupted run continues with `run --resume runs/<run_id>`.
 
 ## Use it with your own ASR
 
-Set up any speech-to-text you like. Append each finished segment to the
-transcript, and check the signals every 30–60 seconds:
+Speech recognition is not included; plug in your own. Put it in `my_asr()`
+below: it should yield `(seconds since the meeting started, text)` for each
+finished sentence. Everything else stays as is.
 
 ```python
 from agenda_signal.judge import JevJudge, build_questions
@@ -113,13 +118,23 @@ questions = build_questions(agendas)
 transcript: list[Utterance] = []
 
 
-def on_asr_segment(t_sec: float, text: str, speaker: str = "unknown") -> None:
-    transcript.append(Utterance(t_sec, speaker, text))
+def my_asr():
+    """YOUR SPEECH RECOGNITION GOES HERE.
+
+    Yield (t_sec, text) for each finished sentence, e.g. from Whisper, a cloud
+    speech-to-text API, or your meeting tool's live captions.
+    """
+    raise NotImplementedError("connect your speech recognition here")
 
 
-def check_signals(now_sec: float) -> dict[str, str]:
-    result = judge.evaluate(build_state(transcript, now_sec), questions)
-    return {agenda_id: p.choice for agenda_id, p in result.predictions.items()}
+last_check = 0.0
+for t_sec, text in my_asr():                          # <- sentences from your ASR
+    transcript.append(Utterance(t_sec, "unknown", text))
+    if t_sec - last_check >= 30:                       # check every 30 seconds
+        result = judge.evaluate(build_state(transcript, t_sec), questions)
+        signals = {agenda_id: p.choice for agenda_id, p in result.predictions.items()}
+        print(signals)                                 # e.g. {'A1': 'green', 'A2': 'yellow'}
+        last_check = t_sec
 ```
 
 Tips from the demo:
