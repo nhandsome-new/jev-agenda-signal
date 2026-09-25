@@ -145,7 +145,6 @@ for t_sec, text in my_asr():                          # <- 自分の ASR から�
 |---|---|---|
 | 音声認識 | [mlx-whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper) 0.4.3、モデル `mlx-community/whisper-large-v3-turbo` | 30秒ごとに新しく入った音声を文字起こしし、最後の文は次の回にもう一度文字起こし |
 | アジェンダの信号 | Jev `jev-1.13.0` | 30秒ごとに、それまでの会議テキスト全体で判定（このリポジトリと同じ方式） |
-| 動画 | Pillow でフレームを描画し ffmpeg でエンコード | ビデオ会議画面 + アジェンダパネル + 開発者画面（処理ログ、Jev の確率） |
 
 30秒ごとの処理時間（実測）：ASR 最大1.1秒、Jev 最大0.7秒。
 
