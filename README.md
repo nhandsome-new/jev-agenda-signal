@@ -125,6 +125,21 @@ Tips from the demo:
 - Describe each agenda item in one plain sentence. Jev reads instructions
   literally.
 
+## How the demo was made (on a local Mac)
+
+The live demo ran entirely on one Mac, except for the Jev API call. The demo
+tools are not part of this repository; this is what was used.
+
+| Step | What | Detail |
+|---|---|---|
+| Machine | Mac Studio, Apple M4 Max, 64 GB | macOS 26 |
+| Meeting audio | Text-to-speech from the transcripts | Korean: built-in macOS `say` voices. English: [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) (`kokoro` 0.9.4), a different voice per speaker. Short random pauses (0.3–0.9 s) between turns |
+| Speech to text | [mlx-whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper) 0.4.3, model `mlx-community/whisper-large-v3-turbo` | Every 30 s, the audio since the last committed point is transcribed; the last segment is re-transcribed next time |
+| Agenda signals | Jev `jev-1.13.0` | Every 30 s, the whole transcript so far, as in this repository |
+| Video | Pillow frames piped to ffmpeg | Video-call layout with the agenda panel, plus a developer view (pipeline log and Jev probabilities) |
+
+Measured per 30-second step: ASR up to 1.1 s, Jev up to 0.7 s.
+
 ## Dataset
 
 | Script | Meeting | Final signals (A1–A5) |

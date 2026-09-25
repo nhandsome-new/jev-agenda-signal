@@ -116,6 +116,21 @@ def check_signals(now_sec: float) -> dict[str, str]:
 - 화자 구분은 없어도 됩니다. 데모에서는 모든 문장을 `"unknown"`으로 보냈습니다.
 - 아젠다 설명은 쉬운 한 문장으로 쓰세요. Jev는 지시문을 글자 그대로 읽습니다.
 
+## 데모는 이렇게 만들었습니다 (로컬 Mac)
+
+실시간 데모는 Jev API 호출을 빼고 모두 Mac 한 대에서 돌렸습니다. 데모용 도구는 이 저장소에
+포함하지 않았고, 사용한 구성은 아래와 같습니다.
+
+| 단계 | 사용한 것 | 내용 |
+|---|---|---|
+| 장비 | Mac Studio, Apple M4 Max, 64GB | macOS 26 |
+| 회의 음성 | 대본을 음성 합성(TTS) | 한국어: macOS 기본 `say` 음성. 영어: [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) (`kokoro` 0.9.4), 참석자마다 다른 목소리. 발화 사이 0.3~0.9초 텀 |
+| 음성 인식 | [mlx-whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper) 0.4.3, 모델 `mlx-community/whisper-large-v3-turbo` | 30초마다 새로 들어온 음성을 받아쓰고, 마지막 문장은 다음 차례에 다시 받아씀 |
+| 아젠다 신호 | Jev `jev-1.13.0` | 30초마다 지금까지의 회의 텍스트 전체로 판정 (이 저장소와 같은 방식) |
+| 영상 | Pillow로 프레임을 그려 ffmpeg로 인코딩 | 화상회의 화면 + 아젠다 패널 + 개발자 화면(처리 로그, Jev 확률) |
+
+30초 단위 처리 시간(실측): ASR 최대 1.1초, Jev 최대 0.7초.
+
 ## 데이터셋
 
 | 대본 | 회의 | 최종 신호 (A1–A5) |
