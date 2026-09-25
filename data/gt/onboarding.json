@@ -1,0 +1,55 @@
+{
+  "version": "onboarding",
+  "events": [
+    {
+      "t_sec": 131,
+      "agenda": "A1",
+      "signal": "green",
+      "note": "first day stated as fixed and accepted"
+    },
+    {
+      "t_sec": 206,
+      "agenda": "A2",
+      "signal": "yellow",
+      "note": "equipment raised"
+    },
+    {
+      "t_sec": 322,
+      "agenda": "A2",
+      "signal": "green",
+      "note": "lead settles the equipment"
+    },
+    {
+      "t_sec": 1141,
+      "agenda": "A3",
+      "signal": "yellow",
+      "note": "mentor raised at the very end"
+    }
+  ],
+  "traps": [
+    {
+      "id": "onboarding-straight-to-green",
+      "agenda": "A1",
+      "expected_final": "green",
+      "description": "The first day is stated as already fixed and accepted, with no discussion first."
+    },
+    {
+      "id": "onboarding-unrelated-training",
+      "agenda": "A4",
+      "expected_final": "red",
+      "description": "'Training' appears only about the company-wide security training."
+    },
+    {
+      "id": "onboarding-unrelated-lunch",
+      "agenda": "A5",
+      "expected_final": "red",
+      "description": "'Lunch' and a team dinner come up, but never a welcome lunch for the new hire."
+    },
+    {
+      "id": "onboarding-last-minute",
+      "agenda": "A3",
+      "expected_final": "yellow",
+      "description": "The mentor is first raised in the last minute and deferred."
+    }
+  ]
+}

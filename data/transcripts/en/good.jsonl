@@ -1,0 +1,105 @@
+{"t_sec": 0, "speaker": "lead", "text": "Is everyone here? Right on time. Today's meeting is to prepare next quarter's team workshop. Let's aim to wrap up within twenty minutes."}
+{"t_sec": 19, "speaker": "member_a", "text": "Sounds good. I put the reference material in the shared folder yesterday. I also added the results from last year's workshop feedback survey."}
+{"t_sec": 36, "speaker": "lead", "text": "Thanks. Everyone, please read the survey results once after the meeting. We have a few things to decide today, so let's go one by one, and anything we can't settle we'll sort out separately at the end."}
+{"t_sec": 60, "speaker": "member_b", "text": "Okay, got it."}
+{"t_sec": 64, "speaker": "member_c", "text": "I'll take the minutes. I'll put each decision up on the screen as we go."}
+{"t_sec": 74, "speaker": "lead", "text": "Great. So first, let's figure out when. Has anyone pulled together some candidate dates for the workshop?"}
+{"t_sec": 87, "speaker": "member_a", "text": "I checked the team calendar, and the second and third Fridays of November are relatively free."}
+{"t_sec": 102, "speaker": "member_b", "text": "The third week might be tight for me because of the month-end report. I have to hand in a draft by Thursday."}
+{"t_sec": 117, "speaker": "member_c", "text": "Either works for me. But the second Friday is the 14th, right?"}
+{"t_sec": 127, "speaker": "member_a", "text": "Yes, November 14th."}
+{"t_sec": 132, "speaker": "lead", "text": "What about Thursday instead of Friday? If we do it on a Friday, I feel like everyone will just want to leave early for the weekend."}
+{"t_sec": 147, "speaker": "member_c", "text": "I actually prefer Friday. If we do it on Thursday, the next day at work will be chaos catching up on everything."}
+{"t_sec": 163, "speaker": "member_a", "text": "In last year's survey, more people said Friday worked well too. The weekend starts right after, so there's no pressure."}
+{"t_sec": 177, "speaker": "member_b", "text": "I'm for Friday as well. It feels like you just head home right after, so people will like it."}
+{"t_sec": 190, "speaker": "lead", "text": "I see. Let's go with a Friday then. Have we checked everyone else's vacation or off-site schedules? It only makes sense if all twelve of us can come."}
+{"t_sec": 207, "speaker": "member_a", "text": "Yes, nobody has requested vacation that week. There's one off-site on Wednesday, but Friday is clear."}
+{"t_sec": 223, "speaker": "member_c", "text": "Does that week clash with any other team's event? Last year it overlapped with a company-wide event and that was a pain."}
+{"t_sec": 236, "speaker": "member_a", "text": "I checked the admin team's calendar too. The company-wide event is in early December, so no overlap."}
+{"t_sec": 248, "speaker": "lead", "text": "So how about Friday, November 14th?"}
+{"t_sec": 256, "speaker": "member_b", "text": "Works for me. The second week doesn't clash with the month-end report either."}
+{"t_sec": 265, "speaker": "member_c", "text": "I'm in favor too."}
+{"t_sec": 269, "speaker": "member_a", "text": "Fine by me."}
+{"t_sec": 272, "speaker": "lead", "text": "Then the date is confirmed: Friday, November 14th."}
+{"t_sec": 281, "speaker": "member_c", "text": "Friday, November 14th, noted. I'll block it on the team calendar right away."}
+{"t_sec": 292, "speaker": "lead", "text": "Next is where to hold it. Has anyone looked into possible places?"}
+{"t_sec": 301, "speaker": "member_b", "text": "I checked two options. One is a training center in Gapyeong, and the other is a large meeting room at a coworking space downtown."}
+{"t_sec": 317, "speaker": "lead", "text": "What are the pros and cons of each?"}
+{"t_sec": 321, "speaker": "member_b", "text": "The Gapyeong training center really gives you a change of scenery, and we can do outdoor activities. The downside is it's about an hour and a half away."}
+{"t_sec": 338, "speaker": "member_b", "text": "The downtown meeting room is easy to get to, but it's too similar to the office, so it probably won't feel like much of a break."}
+{"t_sec": 351, "speaker": "member_c", "text": "Last year when we did it near the office, everyone kept checking email and nobody could focus."}
+{"t_sec": 365, "speaker": "member_a", "text": "Right. That was the most common comment in the survey too. I think it's better to get out, even if it's a bit far. If we rent a bus, we can all travel together."}
+{"t_sec": 385, "speaker": "lead", "text": "If it's an hour and a half, what time do we need to leave in the morning?"}
+{"t_sec": 394, "speaker": "member_b", "text": "If we leave from in front of the office at eight thirty, we'll get there before ten. They said traffic shouldn't be too bad on a Friday morning."}
+{"t_sec": 410, "speaker": "member_c", "text": "Eight thirty is about the same as our normal commute. That's fine."}
+{"t_sec": 421, "speaker": "lead", "text": "Is the training center available that day?"}
+{"t_sec": 428, "speaker": "member_b", "text": "I called them yesterday, and November 14th is still open. They said they'll hold it if we let them know by the end of this week."}
+{"t_sec": 444, "speaker": "member_c", "text": "Does the training center have a projector or a whiteboard? I think we'll have some sit-down time in the morning."}
+{"t_sec": 460, "speaker": "member_b", "text": "Yes, the seminar room has all of that. It fits up to twenty people, so twelve is plenty of room. They have Wi-Fi too."}
+{"t_sec": 475, "speaker": "member_a", "text": "Is there a cafeteria inside the training center? Going out to eat would take quite a while."}
+{"t_sec": 488, "speaker": "member_b", "text": "Yes, there's a cafeteria inside. We just need to tell them the headcount in advance. It's a Korean buffet."}
+{"t_sec": 500, "speaker": "lead", "text": "Nice. Then let's go with the Gapyeong training center. Is everyone okay with that?"}
+{"t_sec": 511, "speaker": "member_a", "text": "Yes, sounds good."}
+{"t_sec": 514, "speaker": "member_c", "text": "I'm in favor too."}
+{"t_sec": 518, "speaker": "member_b", "text": "Me too."}
+{"t_sec": 521, "speaker": "lead", "text": "Great, the place is confirmed: the Gapyeong training center."}
+{"t_sec": 529, "speaker": "lead", "text": "Next up is money. Did anyone check how much the company lets us spend per person this time?"}
+{"t_sec": 543, "speaker": "member_a", "text": "Yes, I asked HR, and they cover up to 70,000 won per person. We just need to collect the receipts and submit them."}
+{"t_sec": 558, "speaker": "member_c", "text": "Does 70,000 won cover the training center rental and lunch?"}
+{"t_sec": 567, "speaker": "member_b", "text": "If you divide the rental fee by headcount, it's about 25,000 won per person. Lunch at the training center cafeteria is 15,000 won."}
+{"t_sec": 583, "speaker": "member_c", "text": "And if we add the bus?"}
+{"t_sec": 588, "speaker": "member_a", "text": "Renting a bus round trip would be a little over 10,000 won per person. That includes the driver's meal."}
+{"t_sec": 602, "speaker": "lead", "text": "So altogether it's about 50,000 won per person. With what's left, we could do an afternoon snack or maybe a dinner."}
+{"t_sec": 616, "speaker": "member_b", "text": "If we have a proper dinner too, we might go a bit over 70,000 won."}
+{"t_sec": 626, "speaker": "member_c", "text": "I think it's fine if everyone just has dinner on their own after we get back to Seoul. People might have plans on a Friday evening anyway."}
+{"t_sec": 641, "speaker": "member_a", "text": "Then how about using the remaining 20,000 won or so for a nicer afternoon snack? Last year there were only chips and people were a little disappointed."}
+{"t_sec": 659, "speaker": "member_b", "text": "Some fruit and coffee would be just about right."}
+{"t_sec": 667, "speaker": "lead", "text": "Okay, let's do this. We spend within 70,000 won per person, get plenty of snacks for the afternoon, and skip dinner."}
+{"t_sec": 685, "speaker": "member_a", "text": "Yes, that sounds good."}
+{"t_sec": 689, "speaker": "member_c", "text": "Agreed."}
+{"t_sec": 692, "speaker": "member_b", "text": "Fine with me too."}
+{"t_sec": 696, "speaker": "lead", "text": "Great, so the limit is 70,000 won per person."}
+{"t_sec": 704, "speaker": "member_c", "text": "70,000 won per person, afternoon snacks, no dinner. Noted."}
+{"t_sec": 715, "speaker": "lead", "text": "Now let's decide what we'll actually do that day. How we fill the day."}
+{"t_sec": 725, "speaker": "member_a", "text": "I'd like to do a retrospective on this quarter in the morning. We never have time to do it properly."}
+{"t_sec": 738, "speaker": "member_c", "text": "A retro sounds good. But if it runs too long people get tired, so I'd cap it at about two hours."}
+{"t_sec": 750, "speaker": "member_a", "text": "Then if we split it into three parts, what went well, what could be better, and what to try next, and use sticky notes, two hours is plenty."}
+{"t_sec": 766, "speaker": "member_c", "text": "Does the training center have sticky notes and pens? If not, we should bring some from the office."}
+{"t_sec": 779, "speaker": "member_b", "text": "They said the seminar room has the basics, but it'd be good to bring a few extra packs just in case."}
+{"t_sec": 792, "speaker": "lead", "text": "During the retro, just make sure it doesn't turn into blaming people. That was a bit of a letdown last year."}
+{"t_sec": 806, "speaker": "member_a", "text": "Sure, I'll set ground rules at the start. We'll talk about the work, not the people."}
+{"t_sec": 820, "speaker": "member_b", "text": "In the afternoon I'd like to add something active. There's a walking trail near the training center."}
+{"t_sec": 833, "speaker": "lead", "text": "Is everyone okay with walking? Didn't someone mention bad knees?"}
+{"t_sec": 842, "speaker": "member_a", "text": "The trail is mostly flat, so a one-hour course should be no problem. They say there's a pavilion halfway where you can rest."}
+{"t_sec": 856, "speaker": "member_c", "text": "What if it rains? The weather can be iffy in November."}
+{"t_sec": 866, "speaker": "member_b", "text": "The training center has an indoor gym, so if it rains we can switch to team games there. Like dodgeball or tug-of-war."}
+{"t_sec": 882, "speaker": "member_c", "text": "Dodgeball is a bit scary. I don't like getting hit by the ball."}
+{"t_sec": 889, "speaker": "member_b", "text": "Then let's do something like balloon volleyball. That doesn't hurt even if it hits you."}
+{"t_sec": 899, "speaker": "member_a", "text": "Nice. With balloon volleyball, we can all just laugh and play."}
+{"t_sec": 909, "speaker": "lead", "text": "Walking right after lunch might make people sleepy, so let's keep it as free time until one thirty."}
+{"t_sec": 922, "speaker": "member_c", "text": "Sounds good. We could take a quick stroll around the training center grounds during that time."}
+{"t_sec": 932, "speaker": "member_a", "text": "It'd also be nice to have a short session at the end to share next quarter's goals. So it connects with the retro."}
+{"t_sec": 946, "speaker": "lead", "text": "Good. So: retro from ten to twelve in the morning, lunch, then the trail walk from one thirty, and indoor team games if it rains."}
+{"t_sec": 963, "speaker": "lead", "text": "Then from four, thirty minutes to share next quarter's goals, and we wrap up at four thirty. Let's go with that."}
+{"t_sec": 978, "speaker": "member_c", "text": "If we leave at four thirty, we'll be back in Seoul before rush hour."}
+{"t_sec": 987, "speaker": "lead", "text": "Is everyone okay with this schedule?"}
+{"t_sec": 992, "speaker": "member_b", "text": "Yes, looks good."}
+{"t_sec": 996, "speaker": "member_a", "text": "Good for me too."}
+{"t_sec": 999, "speaker": "member_c", "text": "I'm in favor."}
+{"t_sec": 1003, "speaker": "lead", "text": "Then the plan for the day is confirmed."}
+{"t_sec": 1009, "speaker": "lead", "text": "Finally, we need to split up who does what."}
+{"t_sec": 1017, "speaker": "lead", "text": "Kenji, since you already looked into the training center and the bus, it'd be great if you handled those. And Emily, how about you run the retro?"}
+{"t_sec": 1034, "speaker": "member_a", "text": "I'd like to run the retro, but I have a business trip the week before, so I might not have enough time to prepare."}
+{"t_sec": 1048, "speaker": "member_b", "text": "I can handle the training center, but for the bus I think I need to talk to the general affairs team first. I heard they're the ones who handle vehicle contracts."}
+{"t_sec": 1068, "speaker": "member_c", "text": "I could take care of announcements and checking attendance. But I also need to look at my schedule next week before I can say for sure."}
+{"t_sec": 1086, "speaker": "lead", "text": "Emily, when do you get back from your trip?"}
+{"t_sec": 1092, "speaker": "member_a", "text": "Wednesday night. So I'd only have Thursday."}
+{"t_sec": 1101, "speaker": "lead", "text": "Hmm, everyone has their own situation, so it's hard to settle it right now."}
+{"t_sec": 1110, "speaker": "lead", "text": "Let's all check our schedules this afternoon and sort it out again in the team chat."}
+{"t_sec": 1121, "speaker": "member_a", "text": "Okay, I'll check my trip schedule and post in the chat."}
+{"t_sec": 1129, "speaker": "member_b", "text": "I'll post as soon as I hear back from general affairs too."}
+{"t_sec": 1136, "speaker": "lead", "text": "Good. So let me recap what we decided today."}
+{"t_sec": 1144, "speaker": "lead", "text": "The date is Friday, November 14th, the place is the Gapyeong training center, the limit is 70,000 won per person, and the day is a morning retro and an afternoon trail walk."}
+{"t_sec": 1162, "speaker": "lead", "text": "Who does what, we'll keep working out in the chat this afternoon."}
+{"t_sec": 1172, "speaker": "member_c", "text": "I'll clean up the minutes and post them within an hour."}
+{"t_sec": 1180, "speaker": "lead", "text": "Thanks. We finished right on time. Good work, everyone."}

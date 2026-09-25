@@ -1,0 +1,49 @@
+{
+  "version": "normal",
+  "events": [
+    {
+      "t_sec": 179,
+      "agenda": "A1",
+      "signal": "yellow",
+      "note": "date raised"
+    },
+    {
+      "t_sec": 377,
+      "agenda": "A1",
+      "signal": "green",
+      "note": "date confirmed: Nov 21"
+    },
+    {
+      "t_sec": 388,
+      "agenda": "A2",
+      "signal": "yellow",
+      "note": "an amount is proposed, no conclusion"
+    },
+    {
+      "t_sec": 1096,
+      "agenda": "A3",
+      "signal": "yellow",
+      "note": "venue named and deferred"
+    }
+  ],
+  "traps": [
+    {
+      "id": "normal-one-sided-proposal",
+      "agenda": "A2",
+      "expected_final": "yellow",
+      "description": "A member suggests an amount, but the lead has to check first, so there is no conclusion."
+    },
+    {
+      "id": "normal-named-and-deferred",
+      "agenda": "A3",
+      "expected_final": "yellow",
+      "description": "The venue is only named and pushed to the next meeting."
+    },
+    {
+      "id": "normal-unrelated-assignment",
+      "agenda": "A5",
+      "expected_final": "red",
+      "description": "A task is assigned for the quarterly report, not for the workshop."
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "good": {"topic": "workshop", "final": {"A1": "green", "A2": "green", "A3": "green", "A4": "green", "A5": "yellow"}},
+  "normal": {"topic": "workshop", "final": {"A1": "green", "A2": "yellow", "A3": "yellow", "A4": "red", "A5": "red"}},
+  "bad": {"topic": "workshop", "final": {"A1": "yellow", "A2": "red", "A3": "red", "A4": "yellow", "A5": "red"}},
+  "office_move": {"topic": "office_move", "final": {"A1": "green", "A2": "green", "A3": "yellow", "A4": "green", "A5": "yellow"}},
+  "onboarding": {"topic": "onboarding", "final": {"A1": "green", "A2": "green", "A3": "yellow", "A4": "red", "A5": "red"}}
+}

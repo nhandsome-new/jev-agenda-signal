@@ -1,0 +1,9 @@
+{
+  "agendas": [
+    {"id": "A1", "title": "First day", "description": "The new hire's first working day."},
+    {"id": "A2", "title": "Equipment", "description": "The laptop and other equipment prepared for the new hire."},
+    {"id": "A3", "title": "Mentor", "description": "Who will be the new hire's mentor."},
+    {"id": "A4", "title": "First-week training", "description": "The new hire's training schedule for the first week."},
+    {"id": "A5", "title": "Welcome lunch", "description": "A team lunch to welcome the new hire."}
+  ]
+}

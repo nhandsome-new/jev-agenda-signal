@@ -1,0 +1,9 @@
+{
+  "agendas": [
+    {"id": "A1", "title": "Date", "description": "When the workshop will be held."},
+    {"id": "A2", "title": "Budget", "description": "How much money can be spent on the workshop."},
+    {"id": "A3", "title": "Venue", "description": "Where the workshop will be held."},
+    {"id": "A4", "title": "Program", "description": "What the team will do during the workshop day."},
+    {"id": "A5", "title": "Roles", "description": "Who takes care of which workshop preparation task."}
+  ]
+}

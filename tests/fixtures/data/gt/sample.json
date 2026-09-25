@@ -1,0 +1,14 @@
+{
+  "version": "sample",
+  "events": [
+    {"t_sec": 20,  "agenda": "A1", "signal": "yellow"},
+    {"t_sec": 95,  "agenda": "A1", "signal": "green"},
+    {"t_sec": 175, "agenda": "A1", "signal": "yellow", "note": "decision put on hold"}
+  ],
+  "traps": [
+    {"id": "sample-reversal", "agenda": "A1", "expected_final": "yellow",
+     "description": "A1 is decided, then reversed and put on hold."},
+    {"id": "sample-unrelated-budget", "agenda": "A2", "expected_final": "red",
+     "description": "'Budget' appears only in small talk about a vacation."}
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "version": "office_move",
+  "events": [
+    {
+      "t_sec": 102,
+      "agenda": "A1",
+      "signal": "yellow",
+      "note": "move date raised"
+    },
+    {
+      "t_sec": 186,
+      "agenda": "A1",
+      "signal": "green",
+      "note": "lead settles Dec 6"
+    },
+    {
+      "t_sec": 204,
+      "agenda": "A3",
+      "signal": "yellow",
+      "note": "seating raised"
+    },
+    {
+      "t_sec": 551,
+      "agenda": "A1",
+      "signal": "yellow",
+      "note": "date reopened after the elevator notice"
+    },
+    {
+      "t_sec": 610,
+      "agenda": "A1",
+      "signal": "green",
+      "note": "lead re-settles Dec 13"
+    },
+    {
+      "t_sec": 631,
+      "agenda": "A2",
+      "signal": "yellow",
+      "note": "moving company raised"
+    },
+    {
+      "t_sec": 742,
+      "agenda": "A4",
+      "signal": "yellow",
+      "note": "IT move raised"
+    },
+    {
+      "t_sec": 875,
+      "agenda": "A2",
+      "signal": "green",
+      "note": "lead settles company B"
+    },
+    {
+      "t_sec": 875,
+      "agenda": "A4",
+      "signal": "green",
+      "note": "same sentence settles the IT move"
+    },
+    {
+      "t_sec": 917,
+      "agenda": "A5",
+      "signal": "yellow",
+      "note": "client notice raised indirectly"
+    }
+  ],
+  "traps": [
+    {
+      "id": "move-reopened-and-resettled",
+      "agenda": "A1",
+      "expected_final": "green",
+      "description": "The date is settled, reopened after a building notice, then settled again."
+    },
+    {
+      "id": "move-two-in-one-sentence",
+      "agenda": "A4",
+      "expected_final": "green",
+      "description": "The IT move is settled in the same sentence as the moving company."
+    },
+    {
+      "id": "move-indirect-client-notice",
+      "agenda": "A5",
+      "expected_final": "yellow",
+      "description": "Clients' address change is raised as 'when should we tell them', with no conclusion."
+    }
+  ]
+}

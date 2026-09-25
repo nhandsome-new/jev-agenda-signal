@@ -1,0 +1,86 @@
+{"t_sec": 0, "speaker": "lead", "text": "Has everyone had lunch? I want to keep today's meeting short."}
+{"t_sec": 12, "speaker": "member_c", "text": "Yes, we went to the new kalguksu place today. There was a bit of a line, but it was good."}
+{"t_sec": 27, "speaker": "member_b", "text": "I heard they make the noodles by hand there. I'm going to try it for lunch tomorrow."}
+{"t_sec": 41, "speaker": "member_a", "text": "I just had a packed lunch today. Lunch prices have gone up so much lately."}
+{"t_sec": 56, "speaker": "member_c", "text": "Right. Twelve thousand won for one lunch is standard now."}
+{"t_sec": 66, "speaker": "member_b", "text": "That's why I've been bringing a packed lunch twice a week too. But getting it ready in the morning is more work than you'd think."}
+{"t_sec": 86, "speaker": "member_a", "text": "I make a few extra side dishes the night before and pack those. That's the easiest way for me."}
+{"t_sec": 100, "speaker": "member_c", "text": "That's impressive. Just getting up in the morning is hard enough for me."}
+{"t_sec": 111, "speaker": "lead", "text": "Tell me about it. Okay, let's get to the main topic. Someone new is joining our team next month. Doyun."}
+{"t_sec": 131, "speaker": "lead", "text": "HR sent over the first day, and it's confirmed as Monday, November 3rd. We'll just go with that date too, right?"}
+{"t_sec": 150, "speaker": "member_a", "text": "Yes, I'll plan on that date."}
+{"t_sec": 158, "speaker": "member_b", "text": "Yes, sounds good."}
+{"t_sec": 162, "speaker": "member_c", "text": "Monday, November 3rd. I'll write that down."}
+{"t_sec": 171, "speaker": "member_a", "text": "What did Doyun do at their previous company?"}
+{"t_sec": 180, "speaker": "lead", "text": "About two years of data analysis work. In the interview, Doyun came across as calm and detail-oriented."}
+{"t_sec": 197, "speaker": "member_b", "text": "With some experience, Doyun should settle in quickly."}
+{"t_sec": 206, "speaker": "lead", "text": "Then let's start by getting the laptop and equipment Doyun will use on the first day."}
+{"t_sec": 217, "speaker": "member_a", "text": "Since it's development work, a 16-inch laptop would be good. With plenty of memory, too."}
+{"t_sec": 233, "speaker": "member_c", "text": "Should we give two monitors? Everyone on our team uses two."}
+{"t_sec": 247, "speaker": "member_b", "text": "Yes, two sounds right. With just one, it'll feel cramped pretty quickly."}
+{"t_sec": 263, "speaker": "member_a", "text": "Requests to the IT team usually take two weeks. We need to put it in now to have it ready for the first day."}
+{"t_sec": 279, "speaker": "member_b", "text": "We should request a keyboard and mouse too. Last time we forgot those, and I ended up lending mine for the whole first week."}
+{"t_sec": 299, "speaker": "member_a", "text": "Oh, right, that happened. Let's add a headset too. There are a lot of video calls."}
+{"t_sec": 312, "speaker": "member_c", "text": "I'll put in the request to the IT team this afternoon."}
+{"t_sec": 322, "speaker": "lead", "text": "Good. Then it's a 16-inch laptop with two monitors, and Haeun will put in the request today."}
+{"t_sec": 341, "speaker": "member_c", "text": "Okay, I'll send it today."}
+{"t_sec": 347, "speaker": "member_b", "text": "Oh, and about that customer complaint from yesterday, what happened with it?"}
+{"t_sec": 360, "speaker": "lead", "text": "Ah, that one. The client got in touch saying the numbers in the monthly report were wrong."}
+{"t_sec": 374, "speaker": "member_b", "text": "Yes, I checked, and the counting method changed starting this month, but no one told the client."}
+{"t_sec": 393, "speaker": "member_a", "text": "So the numbers aren't wrong, the method changed."}
+{"t_sec": 404, "speaker": "member_b", "text": "Yes, exactly. But from the client's side, the numbers suddenly dropped, so they were probably caught off guard."}
+{"t_sec": 421, "speaker": "member_a", "text": "That contact person is pretty particular to begin with. Last time they called about a single decimal point."}
+{"t_sec": 439, "speaker": "member_c", "text": "Still, this time we really should have told them first."}
+{"t_sec": 451, "speaker": "member_b", "text": "Yes, the change was our internal decision, so the client had no way of knowing."}
+{"t_sec": 466, "speaker": "lead", "text": "We should have told them in advance. Let's write up what changed in the method and send an explanation email today."}
+{"t_sec": 486, "speaker": "member_c", "text": "Going forward, whenever the method changes, it'd be good to put even one line about it at the front of the report."}
+{"t_sec": 501, "speaker": "lead", "text": "Good idea. Starting with next month's report, let's note any changes on the first page."}
+{"t_sec": 517, "speaker": "member_b", "text": "I'll write a draft and get it to you by two."}
+{"t_sec": 525, "speaker": "member_c", "text": "Shouldn't we send the same explanation to the other clients too? At least five places get the same report."}
+{"t_sec": 545, "speaker": "lead", "text": "Right. Let's send it to those five as well. I'll look at Kenji's draft and send them all at once."}
+{"t_sec": 562, "speaker": "member_b", "text": "Should we put the numbers before and after the change side by side in a table in the email?"}
+{"t_sec": 575, "speaker": "lead", "text": "Yes, a table would be good. Showing the last three months under both methods side by side will make it easy to understand."}
+{"t_sec": 595, "speaker": "member_a", "text": "Then I'll rerun the last three months' numbers under the new method and pass them to Kenji."}
+{"t_sec": 612, "speaker": "member_b", "text": "Thanks. If I get them by one thirty, I can make the two o'clock deadline."}
+{"t_sec": 625, "speaker": "member_a", "text": "That reminds me, have you signed up for next week's company-wide security training? The deadline is this Friday."}
+{"t_sec": 640, "speaker": "member_c", "text": "Oh, I haven't yet. That one's online, right?"}
+{"t_sec": 652, "speaker": "member_a", "text": "Yes, you watch a one-hour video and take a quiz. If you don't do it, your system access gets blocked."}
+{"t_sec": 669, "speaker": "member_b", "text": "Last year there were people who got locked out because they skipped that training."}
+{"t_sec": 681, "speaker": "member_c", "text": "That quiz is trickier than it looks. I failed it twice last year."}
+{"t_sec": 694, "speaker": "member_a", "text": "I heard the questions are different this year. Lots of questions about spotting phishing emails."}
+{"t_sec": 707, "speaker": "member_b", "text": "Phishing emails look really convincing these days. Last week I got one asking me to track a package, and I almost clicked it."}
+{"t_sec": 728, "speaker": "member_c", "text": "I got one too. The sender's address looked off, so I reported it to the security team."}
+{"t_sec": 740, "speaker": "lead", "text": "Everyone sign up today. It'd be a problem if someone can't work because they skipped the training."}
+{"t_sec": 755, "speaker": "member_c", "text": "Okay, I'll do it right after the meeting."}
+{"t_sec": 763, "speaker": "member_b", "text": "Also, the quarter closes next Friday. Who's putting together the sales figures?"}
+{"t_sec": 777, "speaker": "lead", "text": "Emily, could you do it like last time?"}
+{"t_sec": 786, "speaker": "member_a", "text": "Yes, I'll do it. But the finance team's final numbers won't be out until Thursday."}
+{"t_sec": 799, "speaker": "member_b", "text": "Last quarter the finance numbers came a day late too, and we were up working until late at night."}
+{"t_sec": 813, "speaker": "member_a", "text": "Right. So this time I already asked them to send it by Thursday morning."}
+{"t_sec": 827, "speaker": "lead", "text": "Well done. If it's running late, tell me right away. I'll talk to the head of finance again."}
+{"t_sec": 844, "speaker": "lead", "text": "Then get it on Thursday and have it organized by Friday morning. Let's go over it together Friday afternoon."}
+{"t_sec": 861, "speaker": "member_c", "text": "I have an outside visit Friday afternoon, so I can only do after three."}
+{"t_sec": 874, "speaker": "member_a", "text": "Where are you going?"}
+{"t_sec": 880, "speaker": "member_c", "text": "It's our first regular visit to a client we signed last month. I'm being introduced to their contact person, so I can't miss it."}
+{"t_sec": 898, "speaker": "lead", "text": "Then let's make it three thirty."}
+{"t_sec": 905, "speaker": "member_b", "text": "Also, when are we doing next month's team dinner? It's the end of the year, so restaurants book up fast."}
+{"t_sec": 921, "speaker": "lead", "text": "I'm thinking early December for the team dinner. Let's talk about that separately another time."}
+{"t_sec": 935, "speaker": "member_c", "text": "I'll look into a few places for the dinner. The barbecue place we went to last year was a bit noisy."}
+{"t_sec": 951, "speaker": "member_a", "text": "I'd like a quiet Korean restaurant. It's easier to talk, too."}
+{"t_sec": 962, "speaker": "member_b", "text": "A Korean restaurant sounds good. One with a private room."}
+{"t_sec": 970, "speaker": "member_a", "text": "Wasn't the traditional Korean place we went to last year nice? Even if it was a bit far."}
+{"t_sec": 983, "speaker": "member_b", "text": "It was nice. But it was thirty minutes by taxi, so getting home afterward was hard."}
+{"t_sec": 998, "speaker": "lead", "text": "This time, look for something near the office. If everyone gets home late, the next day is rough."}
+{"t_sec": 1013, "speaker": "member_c", "text": "I'll look for places with a private room."}
+{"t_sec": 1020, "speaker": "member_b", "text": "Oh, and could I take next Monday morning off? I have a doctor's appointment."}
+{"t_sec": 1038, "speaker": "lead", "text": "Yes, that's fine. Put it in the system and I'll approve it."}
+{"t_sec": 1049, "speaker": "member_a", "text": "I'd also like to take some vacation next month. If I want to use it before the end of the year, when would be good?"}
+{"t_sec": 1065, "speaker": "lead", "text": "The week after the quarter closes is fine. Just let me know ahead of time."}
+{"t_sec": 1078, "speaker": "member_c", "text": "That reminds me, doesn't everyone still have quite a lot of leave left this year? I still have seven days."}
+{"t_sec": 1096, "speaker": "member_a", "text": "I have five days left too. It'd be a waste not to use them."}
+{"t_sec": 1106, "speaker": "lead", "text": "Everyone spread your leave out before the end of the year. Put it on the team calendar ahead of time so it doesn't all pile up at once."}
+{"t_sec": 1124, "speaker": "lead", "text": "Oh, look at the time already. I have another meeting right after this, so I think we need to wrap up here."}
+{"t_sec": 1141, "speaker": "member_b", "text": "Oh wait, who's going to be Doyun's mentor? There should be someone to help Doyun from day one."}
+{"t_sec": 1159, "speaker": "lead", "text": "Ah, we need to decide that too. We're out of time, so let's talk about it at the next meeting."}
+{"t_sec": 1175, "speaker": "member_b", "text": "Okay, got it."}
+{"t_sec": 1180, "speaker": "lead", "text": "Good work, everyone."}

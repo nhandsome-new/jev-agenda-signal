@@ -1,0 +1,67 @@
+{
+  "version": "good",
+  "events": [
+    {
+      "t_sec": 74,
+      "agenda": "A1",
+      "signal": "yellow",
+      "note": "date raised"
+    },
+    {
+      "t_sec": 272,
+      "agenda": "A1",
+      "signal": "green",
+      "note": "date confirmed: Nov 14"
+    },
+    {
+      "t_sec": 292,
+      "agenda": "A3",
+      "signal": "yellow",
+      "note": "venue raised"
+    },
+    {
+      "t_sec": 500,
+      "agenda": "A3",
+      "signal": "green",
+      "note": "lead states the conclusion: training center"
+    },
+    {
+      "t_sec": 529,
+      "agenda": "A2",
+      "signal": "yellow",
+      "note": "per-person spending raised without the word budget"
+    },
+    {
+      "t_sec": 667,
+      "agenda": "A2",
+      "signal": "green",
+      "note": "lead states the conclusion: 70,000 won per person"
+    },
+    {
+      "t_sec": 715,
+      "agenda": "A4",
+      "signal": "yellow",
+      "note": "program raised"
+    },
+    {
+      "t_sec": 963,
+      "agenda": "A4",
+      "signal": "green",
+      "note": "lead states the conclusion: the day plan"
+    },
+    {
+      "t_sec": 1009,
+      "agenda": "A5",
+      "signal": "yellow",
+      "note": "roles raised"
+    }
+  ],
+  "traps": [
+    {
+      "id": "good-budget-no-keyword",
+      "agenda": "A2",
+      "expected_final": "green",
+      "description": "Spending per person is settled without the word 'budget' (예산) ever being said."
+    }
+  ]
+}

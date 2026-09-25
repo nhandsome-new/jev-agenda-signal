@@ -1,0 +1,9 @@
+{
+  "agendas": [
+    {"id": "A1", "title": "Move date", "description": "When the team moves to the new office."},
+    {"id": "A2", "title": "Moving company", "description": "Which moving company will do the move."},
+    {"id": "A3", "title": "Seating", "description": "How desks and seats are arranged in the new office."},
+    {"id": "A4", "title": "IT move", "description": "How the network equipment and PCs are moved and set up."},
+    {"id": "A5", "title": "Client notice", "description": "How and when clients are told about the new address."}
+  ]
+}

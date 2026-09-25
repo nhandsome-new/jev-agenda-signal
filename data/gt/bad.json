@@ -1,0 +1,49 @@
+{
+  "version": "bad",
+  "events": [
+    {
+      "t_sec": 222,
+      "agenda": "A1",
+      "signal": "yellow",
+      "note": "date raised"
+    },
+    {
+      "t_sec": 265,
+      "agenda": "A1",
+      "signal": "green",
+      "note": "lead states the conclusion: Nov 21"
+    },
+    {
+      "t_sec": 569,
+      "agenda": "A4",
+      "signal": "yellow",
+      "note": "program raised"
+    },
+    {
+      "t_sec": 1044,
+      "agenda": "A1",
+      "signal": "yellow",
+      "note": "decision reversed, put on hold"
+    }
+  ],
+  "traps": [
+    {
+      "id": "bad-reversal",
+      "agenda": "A1",
+      "expected_final": "yellow",
+      "description": "The date is settled, then taken back and put on hold."
+    },
+    {
+      "id": "bad-unrelated-budget",
+      "agenda": "A2",
+      "expected_final": "red",
+      "description": "'Budget' (예산) appears only in small talk about a personal vacation."
+    },
+    {
+      "id": "bad-unrelated-assignment",
+      "agenda": "A5",
+      "expected_final": "red",
+      "description": "Slide preparation for a different meeting is assigned, not a workshop task."
+    }
+  ]
+}
